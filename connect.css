@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #1a202c, #2d3748);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 24px;
+    margin: 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.header-content p {
+    font-size: 14px;
+    opacity: 0.8;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.share-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.share-btn:hover {
+    transform: rotate(45deg) scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.welcome-section {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.welcome-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.social-handles {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.social-item i {
+    font-size: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.social-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.social-item:hover i {
+    transform: rotate(15deg) scale(1.2);
+}
+
+/* Add specific colors for each social media icon */
+.text-blue-400 { color: #1DA1F2; } /* Twitter */
+.text-pink-400 { color: #E1306C; } /* Instagram */
+.text-blue-500 { color: #0077B5; } /* LinkedIn */
+.text-gray-400 { color: #333; }    /* GitHub */
+.text-blue-300 { color: #0088CC; } /* Telegram */
+.text-indigo-400 { color: #5865F2; } /* Discord */
+.text-green-400 { color: #25D366; } /* WhatsApp */
+.text-gray-700 { color: #12100E; }  /* Medium */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
